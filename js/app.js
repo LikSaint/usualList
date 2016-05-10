@@ -78,8 +78,10 @@ angular.module('purchaseApp').controller('ModalInstanceCtrl', function ($scope, 
     } else{
         $scope.date = new Date();
     }
-    $scope.addItem = function () {
-        $uibModalInstance.close($scope);
+    $scope.addItem = function (modalForm) {
+        if (modalForm.$valid) {
+            $uibModalInstance.close($scope);
+        }
     };
 
     $scope.cancel = function () {
@@ -94,7 +96,7 @@ Array.prototype.remove = function(value) {
     }
     return false;
 };
-/* Директивы на проверку валидации полей больше не нужны. Удалить жалко =)
+/* Директивы на проверку валидации полей больше не нужны. Удалить своё творение жалко =) Для простой валидации они впринципе не нужны, поэтому не будем добавлять.
 purchaseApp.directive('commentcheck', function () {
     return {
         require: 'ngModel',

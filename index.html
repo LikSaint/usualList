@@ -94,18 +94,13 @@
                     <div class="form-group">
                         <div class="commentCont">
                             <textarea class="form-control textArea" name="comment" ng-model="comment" placeholder = "Комментарий" rows="6" required></textarea>
-                            <div class="errorComment" ng-show="(modalForm.addButton.$touched && modalForm.comment.$invalid) || modalForm.$error.commentcheck">
-                                <span class="errorNote">!</span>
-                                <span>Неверное значение</span>
-                                <span class="arrow-left"></span>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
                         <div class="addCont">
-                            <button class="btn btn-default addButton" ng-click="addItem(modalForm)" ng-model="addButton" name="addButton" formnovalidate>Сохранить</button>
+                            <button class="btn btn-default addButton" ng-click="addItem(modalForm)" ng-model="addButton" name="addButton">Сохранить</button>
                         </div>
                     </div>
                     <div class="form-group">
